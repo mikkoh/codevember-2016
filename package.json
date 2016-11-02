@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "async-image-loader": "~2.0.3"
+  }
+}
