@@ -9,11 +9,11 @@ const drawBall = getBall(regl);
 const drawInnerGlass = getBallGlass(regl, true);
 const drawOuterGlass = getBallGlass(regl);
 
-const countBalls = 100;
+const countBalls = 200;
 
 const gravity = -0.1;
 const friction = 0.99;
-const glassInnerRadius = 20;
+const glassInnerRadius = 14;
 const glassOuterRadius = glassInnerRadius + 1;
 const damping = 0.99;
 
@@ -22,10 +22,19 @@ const state = Array.apply(null, Array(countBalls)).map((v, i) => {
     position: [Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1],
     previousPosition: [0, gravity, 0],
     velocity: [Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1],
-    radius: Math.random() * 2 + 0.4,
+    radius: Math.random() * 0.4 + 0.2,
     color: i % 20 === 1 ? [1,0, 0] : [0, Math.random(), 0]
   };
 });
+
+state[0].color = [1, 0, 0.3];
+state[0].radius = 4;
+
+state[1].color = [0, 0, 0.3];
+state[1].radius = 2;
+
+state[2].color = [0, 0, 0.3];
+state[2].radius = 2;
 
 window.addEventListener('click', () => {
   state.forEach((ball) => {

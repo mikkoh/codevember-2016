@@ -24,7 +24,7 @@ module.exports = (regl) => {
 
       void main() {
         vec3 outColor = color;
-        float power = blinnPhongSpec(vec3(1, 1, 1), vec3(0, 0, 1), vNormal, 10.0);
+        float power = blinnPhongSpec(vec3(cos(time), 0.5, sin(time)), vec3(0, 0, 1), vNormal, 10.0);
 
         outColor += lightColor * power * 10.0;
         outColor *= power * 0.2 + 0.8;
@@ -63,6 +63,9 @@ module.exports = (regl) => {
     `),
     uniforms: {
       color: regl.prop('color'),
+      time: ({time}) => {
+        return time;
+      },
       lightColor: (context, {lightColor = [0.1, 0.1, 0.1]}) => {
         return lightColor;
       },
