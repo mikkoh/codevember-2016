@@ -1,0 +1,22 @@
+{
+  "name": "codevember-2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkoh/codevember-2016.git"
+  },
+  "author": "Mikko Haapoja <me@mikkoh.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikkoh/codevember-2016/issues"
+  },
+  "homepage": "https://github.com/mikkoh/codevember-2016#readme",
+  "dependencies": {
+    "browserify": "~13.1.1"
+  }
+}

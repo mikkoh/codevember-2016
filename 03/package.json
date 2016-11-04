@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js --live --open"
+    "start": "budo index.js --live --open",
+    "build": "DIR=03; OUT_PATH=\"../docs/$DIR\"; mkdir ../docs; mkdir $OUT_PATH; ../node_modules/.bin/browserify index.js > $OUT_PATH/index.js; cp ../template/index.html $OUT_PATH/index.html; cp *.jpg $OUT_PATH"
   },
   "author": "Mikko Haapoja <me@mikkoh.com>",
   "license": "ISC",
