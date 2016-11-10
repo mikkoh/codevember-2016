@@ -9,3 +9,4 @@ I'm going to try to do my best to create as many small experiments as possible. 
 - [05](https://mikkoh.github.io/codevember-2016/05/)
 - [06](https://mikkoh.github.io/codevember-2016/06/)
 - [07](https://mikkoh.github.io/codevember-2016/07/)
+- [09](https://mikkoh.github.io/codevember-2016/09/)
