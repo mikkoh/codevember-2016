@@ -1,0 +1,32 @@
+{
+  "name": "02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js --live --open",
+    "build": "DIR=11; OUT_PATH=\"../docs/$DIR\"; mkdir ../docs; mkdir $OUT_PATH; ../node_modules/.bin/browserify index.js > $OUT_PATH/index.js; cp ../template/index.html $OUT_PATH/index.html; cp *.jpg $OUT_PATH"
+  },
+  "author": "Mikko Haapoja <me@mikkoh.com>",
+  "license": "ISC",
+  "dependencies": {
+    "budo": "~9.2.1",
+    "gl-mat4": "~1.1.4",
+    "gl-quat": "~1.0.0",
+    "gl-vec3": "~1.0.3",
+    "glsl-easings": "~1.0.0",
+    "glsl-fast-gaussian-blur": "~1.0.2",
+    "glsl-noise": "~0.0.0",
+    "glsl-specular-blinn-phong": "~1.0.1",
+    "glslify": "~6.0.1",
+    "primitive-cube": "~2.0.0",
+    "primitive-plane": "~1.1.0",
+    "regl": "~1.3.0",
+    "touches": "~1.2.0"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  }
+}
